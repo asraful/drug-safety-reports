@@ -96,6 +96,19 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+
+<!--				customize buildpack for specific JAVA version -->
+					<image>
+<!--						Alpaquita Linux, a 100% Alpine-compatible distro.
+							For : lightweight build
+-->
+						<builder>bellsoft/buildpacks.builder:musl</builder>
+						<env>
+							<BP_JVM_VERSION>21</BP_JVM_VERSION>
+						</env>
+					</image>
+
+
 				</configuration>
 			</plugin>
 		</plugins>
