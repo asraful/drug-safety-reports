@@ -1,1 +1,1 @@
-# drug-safety-reports
+# drug-safety-reports-api

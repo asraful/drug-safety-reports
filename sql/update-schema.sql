@@ -1,0 +1,9 @@
+CREATE TABLE report
+(
+    id            BIGINT NOT NULL,
+    reporter_name VARCHAR(255),
+    product_name  VARCHAR(255),
+    description   VARCHAR(255),
+    timestamp     VARCHAR(255),
+    CONSTRAINT pk_report PRIMARY KEY (id)
+);
