@@ -6,7 +6,11 @@ import org.hibernate.annotations.Comment;
 
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 
 public interface ReportMapper {
     ReportResponse toReportResponse(Report report);
+
+    List<ReportResponse> toReportResponseList(List<Report> reports);
 }

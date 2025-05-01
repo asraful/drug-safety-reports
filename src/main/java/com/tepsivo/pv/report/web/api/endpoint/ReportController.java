@@ -6,14 +6,17 @@ import com.tepsivo.pv.report.service.ReportingService;
 import com.tepsivo.pv.report.web.api.dto.NewReportRequest;
 import com.tepsivo.pv.report.web.api.dto.ReportMapper;
 import com.tepsivo.pv.report.web.api.dto.ReportResponse;
+import com.tepsivo.pv.report.web.api.dto.ReportStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/reports")
@@ -65,5 +68,15 @@ public class ReportController {
             return ResponseEntity.notFound().build(); // 404 Not Found
         }
     }
+
+
+    @GetMapping // Map to GET /reports
+    public ResponseEntity<List<ReportResponse>> getReports(
+            @RequestParam(value = "status", required = true) String status) {
+        List<ReportResponse> reportResponses =
+                reportMapper.toReportResponseList(reportingService.getReportsByStatus(ReportStatus.valueOf(status)));
+        return ResponseEntity.ok(reportResponses);
+    }
+
 
 }

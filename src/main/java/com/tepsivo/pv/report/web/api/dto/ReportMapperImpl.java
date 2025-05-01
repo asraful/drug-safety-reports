@@ -4,6 +4,9 @@ import com.tepsivo.pv.report.repository.Report;
 
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 @Component
 public class ReportMapperImpl implements ReportMapper {
@@ -19,5 +22,12 @@ public class ReportMapperImpl implements ReportMapper {
         reportResponse.setStatus(ReportStatus.fromCode(report.getStatus().getCode()));
 
         return reportResponse;
+    }
+
+    @Override
+    public List<ReportResponse> toReportResponseList(List<Report> reports) {
+        return reports.stream()
+                .map(this::toReportResponse)
+                .collect(Collectors.toList());
     }
 }
