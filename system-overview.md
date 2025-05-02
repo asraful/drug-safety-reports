@@ -14,6 +14,15 @@
 
 ---
 
+
+## 🧩 AWS architecture
+
+
+![AWS diagram](https://github.com/user-attachments/assets/c732e751-367a-47f5-9261-fca0fba3ac64)
+
+---
+
+
 ## 🛡️ Security
 
 - Uses **basic authentication** or a static **API key (`X-API-KEY: PV001xtv`)** for secured endpoints.
