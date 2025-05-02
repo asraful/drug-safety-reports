@@ -20,6 +20,10 @@
 
 ![AWS diagram](https://github.com/user-attachments/assets/c732e751-367a-47f5-9261-fca0fba3ac64)
 
+
+## Hoever this could be improved by getting inspired by :
+
+  [Detail Example](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-an-amazon-api-gateway-api-on-an-internal-website-using-private-endpoints-and-an-application-load-balancer.html])
 ---
 
 
