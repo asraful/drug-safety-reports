@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "6d9beadf-34d9-4745-b28f-b1bf3fefd948",
+		"name": "Tepsivo.PV.AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7086407"
+	},
+	"item": [
+		{
+			"name": "New Report",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "PV001xtv",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reporterName\": \"PV Tester\",\n  \"productName\": \"Panadol\",\n  \"description\": \"Vomiting\",\n  \"timestamp\": \"2025-05-01T14:30:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://drug-reports-alb-390816149.eu-north-1.elb.amazonaws.com/reports",
+					"protocol": "http",
+					"host": [
+						"drug-reports-alb-390816149",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "PV001xtv",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reporterName\": \"PV Tester\",\n  \"productName\": \"Panadol\",\n  \"description\": \"Vomiting\",\n  \"timestamp\": \"2025-05-01T14:30:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://drug-reports-alb-390816149.eu-north-1.elb.amazonaws.com/reports/{{reportId}}",
+					"protocol": "http",
+					"host": [
+						"drug-reports-alb-390816149",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"reports",
+						"{{reportId}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports By  Status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "PV001xtv",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reporterName\": \"PV Tester\",\n  \"productName\": \"Panadol\",\n  \"description\": \"Vomiting\",\n  \"timestamp\": \"2025-05-01T14:30:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://drug-reports-alb-390816149.eu-north-1.elb.amazonaws.com/reports?status=NEW",
+					"protocol": "http",
+					"host": [
+						"drug-reports-alb-390816149",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"reports"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "NEW"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
