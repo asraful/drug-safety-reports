@@ -11,12 +11,12 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class ReportApplicationTests {
 
 
-	@Autowired
-	private ReportController controller;
+    @Autowired
+    private ReportController controller;
 
-	@Test
-	void contextLoads() throws Exception {
-		assertThat(controller).isNotNull();
-	}
+    @Test
+    void contextLoads() throws Exception {
+        assertThat(controller).isNotNull();
+    }
 
 }
