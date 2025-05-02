@@ -1,7 +1,9 @@
 
 .idea/*
-
+.idea/compiler.xml
 target/
+
+logs
 # Compiled class file
 *.class
 

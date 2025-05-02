@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface DrugSafetyReportRepository extends JpaRepository<Report,Long> {
+public interface DrugSafetyReportRepository extends JpaRepository<Report, Long> {
     Optional<Report> findById(String id);
 
     List<Report> findByStatus(ReportStatus status);
