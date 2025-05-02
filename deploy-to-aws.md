@@ -1,4 +1,4 @@
-# Manual Deployment to AWS ECS
+# Manual Deployment to AWS 
 This guide outlines the steps to manually deploy a Dockerized application to AWS Elastic Container Service (ECS), assuming you have already created your Elastic Container Registry (ECR) repository.
 
 ## Future Improvement : This should be automated through CI/CD
