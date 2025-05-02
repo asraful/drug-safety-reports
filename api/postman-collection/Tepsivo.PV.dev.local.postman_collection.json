@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "58b649b6-d2ae-4755-a3fc-0e3640b827cc",
+		"name": "Tepsivo.PV.dev.local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7086407"
+	},
+	"item": [
+		{
+			"name": "New Report",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "PV001xtv",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reporterName\": \"PV Tester\",\n  \"productName\": \"Panadol\",\n  \"description\": \"Vomiting\",\n  \"timestamp\": \"2025-05-01T14:30:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reporterName\": \"PV Tester\",\n  \"productName\": \"Panadol\",\n  \"description\": \"Vomiting\",\n  \"timestamp\": \"2025-05-01T14:30:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/reports/{{reportId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"reports",
+						"{{reportId}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports By  Status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "PV001xtv",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reporterName\": \"PV Tester\",\n  \"productName\": \"Panadol\",\n  \"description\": \"Vomiting\",\n  \"timestamp\": \"2025-05-01T14:30:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/reports?status=NEW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"reports"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "NEW"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
