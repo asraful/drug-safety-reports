@@ -52,3 +52,12 @@ Build your Docker image:
 
 ![Screenshot 2025-05-03 at 2 27 29](https://github.com/user-attachments/assets/3eb7a706-cd89-4f89-b2ab-403d14462ff4)
 
+
+## Cloudwatch Log groups :
+
+![Screenshot 2025-05-03 at 2 44 40](https://github.com/user-attachments/assets/7c07e8f1-c050-4d08-a268-70f3163580c9)
+
+
+
+
+
