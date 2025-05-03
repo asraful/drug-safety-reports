@@ -17,6 +17,10 @@ This project is focused on building a minimal, clean, and deployable REST API fo
 - [🧾 System Overview](system-overview.md)
 - [🧾 Architecture Decision Record (ADR)](adr.md)
 
+## 📄 API Spec and Postman Collection 
+
+- [View the API Specification](open-api-spec/pv_safety_report.yml)
+- [View POSTMAN Collection](postman-collection/postman-collection)
 
 
 ## 🚀 Clone, Build, and Run Locally
