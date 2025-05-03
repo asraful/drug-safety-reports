@@ -1,8 +1,10 @@
 
 # 🧾 System Overview – Drug Safety Reporting API
 
-## 📦 Project Structure
+## 📦 Directory Structure
 
+
+![Screenshot 2025-05-03 at 15 26 45](https://github.com/user-attachments/assets/deea27e0-74f3-45cd-bcc8-fb33a175fec3)
 
 
 
@@ -10,7 +12,9 @@
 
 ## 🧩 Key Components
 
-
+  - REST endpoints
+  - Web security configuration
+  - Basic service and data access layer
 
 ---
 
@@ -43,7 +47,7 @@
 
 ## 🚀 Deployment Notes
 
-
+- [📋 Deploy to AWS](deploy-to-aws.md)
 
 ---
 
@@ -56,3 +60,4 @@
 - Implement audit logging and error monitoring
 - IoC code using terraform and integrated with CI/CD
 - Improved exception handling
+- Expose API with API gateway 
