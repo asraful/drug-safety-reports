@@ -3,6 +3,13 @@ This guide outlines the steps to manually deploy a Dockerized application to AWS
 
 ## Future Improvement : This should be automated through CI/CD
 
+📄 **Official Guide**:  -- Reference Purpose
+
+[Deploying to Amazon ECS — GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-to-amazon-elastic-container-service)
+
+[Build and push Docker images to Amazon ECR using GitHub Actions and Terraform](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/build-and-push-docker-images-to-amazon-ecr-using-github-actions-and-terraform.html)
+
+
 ## Prerequisites
 
 * **AWS CLI configured:** You need the AWS Command Line Interface installed and configured with your AWS credentials.
