@@ -60,3 +60,4 @@
 - Implement audit logging and error monitoring
 - IoC code using terraform and integrated with CI/CD
 - Improved exception handling
+- Expose API with API gateway 
