@@ -47,7 +47,7 @@
 
 ## 🚀 Deployment Notes
 
-
+- [📋 Deploy to AWS](deploy-to-aws.md)
 
 ---
 
