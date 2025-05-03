@@ -19,7 +19,7 @@ This project is focused on building a minimal, clean, and deployable REST API fo
 
 ## 📄 API Spec and Postman Collection 
 
-- [View the API Specification](open-api-spec/pv_safety_report.yml)
+- [View the API Specification](api/open-api-spec/pv_safety_report.yml)
 - [View the Postman Collection](api/postman-collection)
 
 
