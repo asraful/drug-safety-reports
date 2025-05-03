@@ -24,7 +24,7 @@ import java.util.Optional;
 @RequestMapping("/reports")
 public class ReportController {
 
-    private Logger logger = LoggerFactory.getLogger(ReportController.class);
+    private final Logger logger = LoggerFactory.getLogger(ReportController.class);
 
     private final ReportingService reportingService;
 
@@ -32,6 +32,7 @@ public class ReportController {
         this.reportingService = reportingService;
     }
 
+    private String MESSAGE_KEY = "message";
 
     @PostMapping
     public ResponseEntity<Object> createReport(@RequestBody NewReportRequest newReportRequest) {
@@ -54,7 +55,7 @@ public class ReportController {
 
             Map<String, Object> response = new HashMap<>();
             response.put("id", generatedId);
-            response.put("message", "Report created successfully");
+            response.put(MESSAGE_KEY, "Report created successfully");
             return new ResponseEntity<>(response, HttpStatus.CREATED);
         } catch (Exception e) {
             throw new APIException("Failed to create new report", HttpStatus.INTERNAL_SERVER_ERROR);
@@ -74,7 +75,7 @@ public class ReportController {
                 return ResponseEntity.ok(reportResponse);
             } else {
                 Map<String, String> response = new HashMap<>();
-                response.put("message", "Report Not Found");
+                response.put(MESSAGE_KEY, "Report Not Found");
                 return new ResponseEntity(response, HttpStatus.NOT_FOUND);
             }
         } catch (Exception e) {
@@ -90,19 +91,18 @@ public class ReportController {
 
         if (status == null || status.isEmpty()) {
             Map<String, String> error = new HashMap<>();
-            error.put("message", "status is required");
+            error.put(MESSAGE_KEY, "status is required");
 
             return new ResponseEntity(error, HttpStatus.NOT_FOUND);
         }
         try {
-
 
             List<ReportResponse> reportResponses =
                     reportMapper.toReportResponseList(reportingService.getReportsByStatus(ReportStatus.valueOf(status)));
 
             if (reportResponses.isEmpty()) {
                 Map<String, String> response = new HashMap<>();
-                response.put("message", "Reports not available");
+                response.put(MESSAGE_KEY, "Reports not available");
                 return new ResponseEntity(response, HttpStatus.NOT_FOUND);
             }
             return ResponseEntity.ok(reportResponses);
@@ -110,7 +110,7 @@ public class ReportController {
         } catch (IllegalArgumentException e) {
             logger.error("Invalid status value: {}", status, e);
             Map<String, String> error = new HashMap<>();
-            error.put("message", "Invalid status value: " + status);
+            error.put(MESSAGE_KEY, "Invalid status value: " + status);
             return new ResponseEntity(error, HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
             throw new APIException("Failed to get reports", HttpStatus.INTERNAL_SERVER_ERROR);

@@ -23,17 +23,5 @@ public class WebSecurityConfig {
                 .addFilterBefore(new AuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
-
-
-/*    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf().disable()
-                .authorizeHttpRequests()
-                .anyRequest().permitAll(); // Allow all requests without auth
-
-        http.headers().frameOptions().disable();
-        return http.build();
-    }*/
 }
 

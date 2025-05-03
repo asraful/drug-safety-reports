@@ -1,6 +1,5 @@
 package com.tepsivo.pv.report.web.api.dto;
 
-import lombok.Builder;
 import lombok.Data;
 
 @Data

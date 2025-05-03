@@ -12,17 +12,17 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class ReportMapperImplTest {
+class ReportMapperImplTest {
     @InjectMocks
     private ReportMapperImpl reportMapper;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         MockitoAnnotations.openMocks(this); // Initialize Mockito mocks
     }
 
     @Test
-    public void testToReportResponse() {
+    void testToReportResponse() {
 
         Report report = new Report();
         report.setId("123");
@@ -47,7 +47,7 @@ public class ReportMapperImplTest {
 
 
     @Test
-    public void testToReportResponseList() {
+    void stToReportResponseList() {
         // Given
         Report report1 = new Report();
         report1.setId("123");

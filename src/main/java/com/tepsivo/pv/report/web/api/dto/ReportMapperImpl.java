@@ -1,7 +1,6 @@
 package com.tepsivo.pv.report.web.api.dto;
 
 import com.tepsivo.pv.report.repository.Report;
-
 import org.springframework.stereotype.Component;
 
 import java.util.List;

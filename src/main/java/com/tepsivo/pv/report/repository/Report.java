@@ -2,8 +2,6 @@ package com.tepsivo.pv.report.repository;
 
 import com.tepsivo.pv.report.web.api.dto.ReportStatus;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

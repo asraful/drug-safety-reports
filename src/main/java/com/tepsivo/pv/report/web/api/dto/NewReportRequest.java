@@ -48,6 +48,6 @@ public class NewReportRequest {
         if (hasErrors) {
             return Map.of("message", errorMessage);
         }
-        return null; // Return null for no errors,  Spring prefers null for empty Optionals
+        return null;
     }
 }
