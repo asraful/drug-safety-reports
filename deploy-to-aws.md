@@ -34,7 +34,7 @@ Build your Docker image:
     
     docker tag <your_app_name>:<tag> <your_aws_account_id>.dkr.ecr.<your_aws_region>[.amazonaws.com/](https://.amazonaws.com/)<your_repo_name>:<tag>
     
-    Example : docker tag report:0.0.1-SNAPSHOT 818346694630.dkr.ecr.eu-north-1.amazonaws.com/report:0.0.1-SNAPSHOT
+    Example : docker tag report:0.0.1-SNAPSHOT 818346694630.dkr.ecr.eu-north-1.amazonaws.com/asraful-dev:latest
 
 ## Step 4: Push image to ECR
  
